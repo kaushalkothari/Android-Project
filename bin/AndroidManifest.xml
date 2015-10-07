@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.algomall"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18"
+         />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.project.algomall.Splash"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.project.algomall.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.project.algomall.MAINACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.project.algomall.Menu_acc"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Menu_ds"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Menu_daa"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Lists"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Stack"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Queue"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Trees"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Graphs"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.StorageClasses"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Recursion"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.StringProcessing"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Pointers"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.AlgorithmAnalysis"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Files"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Hashing"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Introduction"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DivideAndConquer"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.GreedyMethod"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DynamicProgramming"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Backtracking"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.BasicTraversal"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.SearchTechniques"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Searching"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Sorting"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.Stackctivity"
+            android:label="@string/title_activity_stackctivity" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.StackActivity"
+            android:label="@string/title_activity_stack" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSSTACK"
+            android:label="@string/title_activity_dsstack" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSQUEUE"
+            android:label="@string/title_activity_dsqueue" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSLINEARSEARCH"
+            android:label="@string/title_activity_dslinearsearch" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSBINARYSEARCH"
+            android:label="@string/title_activity_dsbinarysearch" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSSEARCH"
+            android:label="@string/title_activity_dssearch" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSLINKLIST"
+            android:label="@string/title_activity_dslinklist" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSSINGLLY"
+            android:label="@string/title_activity_dssinglly" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSDOUBLLY"
+            android:label="@string/title_activity_dsdoublly" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSSORT"
+            android:label="@string/title_activity_dssort" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSBUBBLE"
+            android:label="@string/title_activity_dsbubble" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSSELECTION"
+            android:label="@string/title_activity_dsselection" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSINSESRTION"
+            android:label="@string/title_activity_dsinsesrtion" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSQUICKSORT"
+            android:label="@string/title_activity_dsquicksort" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.DSMERGESORT"
+            android:label="@string/title_activity_dsmergesort" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.TREEActivity"
+            android:label="@string/title_activity_tree" >
+        </activity>
+        <activity
+            android:name="com.project.algomall.About"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

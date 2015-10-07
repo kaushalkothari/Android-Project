@@ -1,0 +1,24 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>Dynamic programming</h1> </center>
+There are two key attributes that a problem must have in order for dynamic programming to be applicable: optimal substructure and overlapping subproblems. If a problem can be solved by combining optimal solutions to non-overlapping subproblems, the strategy is called "divide and conquer" instead. This is why mergesort and quicksort are not classified as dynamic programming problems.
+<h2>Optimal substructure</h2>
+Optimal substructure means that the solution to a given optimization problem can be obtained by the combination of optimal solutions to its subproblems. Consequently, the first step towards devising a dynamic programming solution is to check whether the problem exhibits such optimal substructure. Such optimal substructures are usually described by means of recursion. 
+<h2>Overlapping subproblems</h2>
+Overlapping subproblems means that the space of subproblems must be small, that is, any recursive algorithm solving the problem should solve the same subproblems over and over, rather than generating new subproblems.
+<p>This can be achieved in either of two ways:</p>
+<h2>Top-down Approach</h2>
+This is the direct fall-out of the recursive formulation of any problem. If the solution to any problem can be formulated recursively using the solution to its subproblems, and if its subproblems are overlapping, then one can easily memoize or store the solutions to the subproblems in a table. Whenever we attempt to solve a new subproblem, we first check the table to see if it is already solved. If a solution has been recorded, we can use it directly, otherwise we solve the subproblem and add its solution to the table.
+<h2>Bottom-up Approach</h2>
+  Once we formulate the solution to a problem recursively as in terms of its subproblems, we can try reformulating the problem in a bottom-up fashion: try solving the subproblems first and use their solutions to build-on and arrive at solutions to bigger subproblems. This is also usually done in a tabular form by iteratively generating solutions to bigger and bigger subproblems by using the solutions to small subproblems. For example, if we already know the values of F41 and F40, we can directly calculate the value of F42.
+
+<body></body>
+<Html>

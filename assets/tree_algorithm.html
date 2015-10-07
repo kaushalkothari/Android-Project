@@ -1,0 +1,83 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+p{color:red}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1> Tree</h1> </center>
+<h2></h2>
+<h3>Algorithm For node in B-Tree</h3>
+
+B-TREE-INSERT(T, k)</br>
+
+
+ r ? root[T]</br>
+ if n[r] = 2t - 1</br>
+ 	then s ? ALLOCATE-NODE()</br>
+ 		root[T] ? s</br>
+ 		leaf[s] ? FALSE</br>
+ 		n[s] ? 0</br>
+ 		c1[s] ? r</br>
+ 		B-TREE-SPLIT-CHILD(s, 1, r)</br>
+		B-TREE-INSERT-NONFULL(s, k)</br>
+ 	else B-TREE-INSERT-NONFULL(r, k)</br>
+</br>
+
+
+<h3>Algorithm For deletion in b tree</h3>
+
+
+ B-Tree-Delete-Key(x, k)</br>
+ 	if not leaf[x] then</br>
+		y ? Preceding-Child(x)</br>
+		z ? Successor-Child(x)</br>
+		if n[y] > t - 1 then</br>
+			k' ? Find-Predecessor-Key(k, x)</br>
+			Move-Key(k', y, x)</br>
+			Move-Key(k, x, z)</br>
+			B-Tree-Delete-Key(k, z)</br>
+		else if n[z] > t - 1 then</br>
+			k' ? Find-Successor-Key(k, x)</br>
+			Move-Key(k', z, x)</br>
+			Move-Key(k, x, y)</br>
+			B-Tree-Delete-Key(k, y)</br>
+		else</br>
+			Move-Key(k, x, y)</br>
+			Merge-Nodes(y, z)</br>
+			B-Tree-Delete-Key(k, y)</br>
+		else (leaf node)</br>
+		 y ? Preceding-Child(x)</br>
+		 z ? Successor-Child(x)</br>
+		 w ? root(x)</br>
+		 v ? RootKey(x)</br>
+			if n[x] > t - 1 then Remove-Key(k, x)</br>
+			else if n[y] > t - 1 then</br>
+				k' ? Find-Predecessor-Key(w, v)</br>
+				Move-Key(k', y,w)</br>
+				k' ? Find-Successor-Key(w, v)</br>
+				Move-Key(k',w, x)</br>
+				B-Tree-Delete-Key(k, x)</br>
+			else if n[w] > t - 1 then</br>
+				k' ? Find-Successor-Key(w, v)</br>
+				Move-Key(k', z,w)</br>
+				k' ? Find-Predecessor-Key(w, v)</br>
+				Move-Key(k',w, x)</br>
+				B-Tree-Delete-Key(k, x)</br>
+			else</br>
+				s ? Find-Sibling(w)</br>
+				w' ? root(w)</br>
+					if n[w'] = t - 1 then</br>
+						Merge-Nodes(w',w)</br>
+						Merge-Nodes(w, s)</br>
+						B-Tree-Delete-Key(k, x)</br>
+					else</br>
+						Move-Key(v,w, x)</br>
+						B-Tree-Delete-Key(k, x)</br>
+</body>
+</Html>

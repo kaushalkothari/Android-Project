@@ -1,0 +1,67 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1></h1> </center>
+
+     Storage class specifiers in C language tells the compiler where to store a variable, how to store the variable, what is the initial value of the variable and life time of the variable.
+<p>Syntax</p>
+storage_specifier data_type variable _name
+<h2>Types of Storage Class Specifiers in C</h2>
+<br>1.auto</br>
+<br>2.extern</br>
+<br>3.static</br>
+<br>4.register</br>
+<table border="1" style="width:50%" >
+  <tr>
+    <td>S. No.</td>
+    <td>Storage Specifier</td>		
+    <td>Storage place</td>
+    <td>Initial / default value</td>
+    <td>Scope</td>
+    <td>Life</td>
+  </tr>
+  <tr>
+<td>1</td>
+<td>auto</td>
+<td>CPU Memory</td>
+<td>Garbage value</td>
+<td>local</td>
+<td>Within the function only.</td>
+    
+  </tr>
+  <tr>
+ <td>2</td>
+<td>extern</td>
+<td>CPU memory</td>
+<td>Zero</td>
+<td>Global</td>
+<td>Till the end of the main program.
+Variable definition might be anywhere in the C program</td>
+  </tr>
+ <tr>
+<td>3</td>
+<td>static</td>
+<td>CPU memory</td>
+<td>Zero</td>
+<td>local</td>
+<td>Retains the value of the variable
+between different function calls.</td>
+  </tr>
+ <tr>
+<td>4</td>
+<td>register</td>
+<td>Register memory</td>
+<td>Garbage value</td>
+<td>local</td>
+<td>Within the function</td>
+  </tr>
+</table>
+<body></body>
+<Html>

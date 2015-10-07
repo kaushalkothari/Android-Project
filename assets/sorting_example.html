@@ -1,0 +1,203 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1></h1> </center>
+<h2>Merge sort</h2>
+Conceptually, a merge sort works as follows:</br></br>
+
+Divide the unsorted list into n sublists, each containing 1 element (a list of 1 element is considered sorted).</br>
+Repeatedly merge sublists to produce new sorted sublists until there is only 1 sublist remaining. This will be the sorted list.</br>
+<h3>Top-down implementation:</h3>
+<p>Example C like code using indices for top down merge sort algorithm that recursively splits the list (called runs in this example) into sublists until sublist size is 1, then merges those sublists to produce a sorted list. The copy back step could be avoided if the recursion alternated between two functions so that the direction of the merge corresponds with the level of recursion.</p></br></br></br>
+
+TopDownMergeSort(A[], B[], n)</br>
+{</br>
+    TopDownSplitMerge(A, 0, n, B);</br>
+}</br></br>
+ 
+// iBegin is inclusive; iEnd is exclusive (A[iEnd] is not in the set)</br>
+TopDownSplitMerge(A[], iBegin, iEnd, B[])</br>
+{</br>
+    if(iEnd - iBegin < 2)                       // if run size == 1</br>
+        return;                                 //   consider it sorted</br>
+    // recursively split runs into two halves until run size == 1,</br>
+    // then merge them and return back up the call chain</br>
+    iMiddle = (iEnd + iBegin) / 2;              // iMiddle = mid point</br>
+    TopDownSplitMerge(A, iBegin,  iMiddle, B);  // split / merge left  half</br>
+    TopDownSplitMerge(A, iMiddle,    iEnd, B);  // split / merge right half</br>
+    TopDownMerge(A, iBegin, iMiddle, iEnd, B);  // merge the two half runs</br>
+    CopyArray(B, iBegin, iEnd, A);              // copy the merged runs back to A</br>
+}</br>
+ 
+//  left half is A[iBegin :iMiddle-1]</br>
+// right half is A[iMiddle:iEnd-1   ]</br>
+TopDownMerge(A[], iBegin, iMiddle, iEnd, B[])</br>
+{</br>
+    i0 = iBegin, i1 = iMiddle;</br>
+ 
+    // While there are elements in the left or right runs</br>
+    for (j = iBegin; j < iEnd; j++) {</br>
+        // If left run head exists and is <= existing right run head.</br>
+        if (i0 < iMiddle && (i1 >= iEnd || A[i0] <= A[i1]))</br>
+            B[j] = A[i0];</br>
+            i0 = i0 + 1;</br>
+        else</br>
+            B[j] = A[i1];</br>
+            i1 = i1 + 1;    </br>
+    } </br>
+}</br></br>
+ 
+CopyArray(B[], iBegin, iEnd, A[])</br>
+{</br>
+    for(k = iBegin; k < iEnd; k++)</br>
+        A[k] = B[k];</br>
+}</br>
+<h3>Bottom-up implementation:</h3>
+<p>Example C like code using indices for bottom up merge sort algorithm which treats the list as an array of n sublists (called runs in this example) of size 1, and iteratively merges sub-lists back and forth between two buffers:</p></br></br></br>
+void BottomUpMerge(A[], iLeft, iRight, iEnd, B[])</br>
+{</br>
+  i0 = iLeft;</br>
+  i1 = iRight;</br>
+  j;</br>
+ 
+  /* While there are elements in the left or right runs */</br>
+  for (j = iLeft; j < iEnd; j++)</br>
+    {</br>
+      /* If left run head exists and is <= existing right run head */</br>
+      if (i0 < iRight && (i1 >= iEnd || A[i0] <= A[i1]))</br>
+        {</br>
+          B[j] = A[i0];</br>
+          i0 = i0 + 1;</br>
+        }</br>
+      else</br>
+        {</br>
+          B[j] = A[i1];</br>
+          i1 = i1 + 1;</br>
+        }</br>
+    }</br>
+}</br></br>
+ 
+void CopyArray(B[], A[], n)</br>
+{</br>
+    for(i = 0; i < n; i++)</br>
+        A[i] = B[i];</br>
+}</br>
+ </br>
+/* array A[] has the items to sort; array B[] is a work array */</br>
+void BottomUpSort(A[], B[], n)</br>
+{</br>
+  /* Each 1-element run in A is already "sorted". */</br>
+  /* Make successively longer sorted runs of length 2, 4, 8, 16... until whole array is sorted. */</br>
+  for (width = 1; width < n; width = 2 * width)</br>
+    {</br>
+      /* Array A is full of runs of length width. */</br>
+      for (i = 0; i < n; i = i + 2 * width)</br>
+        {</br>
+          /* Merge two runs: A[i:i+width-1] and A[i+width:i+2*width-1] to B[] */</br>
+          /* or copy A[i:n-1] to B[] ( if(i+width >= n) ) */</br>
+          BottomUpMerge(A, i, min(i+width, n), min(i+2*width, n), B);</br>
+        }</br>
+      /* Now work array B is full of runs of length 2*width. */</br>
+      /* Copy array B to array A for next iteration. */</br>
+      /* A more efficient implementation would swap the roles of A and B */</br>
+      CopyArray(B, A, n);</br>
+      /* Now array A is full of runs of length 2*width. */</br>
+    }</br>
+}</br>
+<h2>Heap sort</h2>
+<p>The following is a simple way to implement the algorithm in pseudocode. Arrays are zero-based and swap is used to exchange two elements of the array. Movement 'down' means from the root towards the leaves, or from lower indices to higher. Note that during the sort, the largest element is at the root of the heap at a[0], while at the end of the sort, the largest element is in a[end].</p></br></br></br>
+procedure heapsort(a, count) is</br>
+    input: an unordered array a of length count</br>
+ </br>
+    (Build the heap in array a so that largest value is at the root)</br>
+    heapify(a, count)</br>
+</br>
+    (The following loop maintains the invariants that a[0:end] is a heap and every element</br>
+     beyond end is greater than everything before it (so a[end:count] is in sorted order))</br>
+    end <- count - 1</br>
+    while end > 0 do</br>
+        (a[0] is the root and largest value. The swap moves it in front of the sorted elements.)</br>
+        swap(a[end], a[0])</br>
+        (the heap size is reduced by one)</br>
+        end <- end - 1</br>
+        (the swap ruined the heap property, so restore it)</br>
+        siftDown(a, 0, end)</br>
+<h2>Insertion sort</h2>
+<p>Pseudocode of the complete algorithm follows, where the arrays are zero-based:</p></br></br>
+for i <- 1 to length(A) - 1</br>
+    j <- i</br>
+    while j > 0 and A[j-1] > A[j]</br>
+        swap A[j] and A[j-1]</br>
+        j <- j - 1</br>
+    end while</br>
+end for</br>
+
+<h2>Bubble sort</h2>
+procedure bubbleSort( A : list of sortable items )</br>
+   n = length(A)</br>
+   repeat </br>
+     swapped = false</br>
+     for i = 1 to n-1 inclusive do</br>
+       /* if this pair is out of order */</br>
+       if A[i-1] > A[i] then</br>
+         /* swap them and remember something changed */</br>
+         swap( A[i-1], A[i] )</br>
+         swapped = true</br>
+       end if</br>
+     end for</br>
+   until not swapped</br>
+end procedure</br>
+
+<h2>Selection sort</h2>
+function select(list[1..n], k)</br>
+     for i from 1 to k</br>
+         minIndex = i</br>
+         minValue = list[i]</br>
+         for j from i+1 to n</br>
+             if list[j] < minValue</br>
+                 minIndex = j</br>
+                 minValue = list[j]</br>
+         swap list[i] and list[minIndex]</br>
+     return list[k]</br>
+<h2>Quick sort</h2>
+Quicksort is a divide and conquer algorithm. Quicksort first divides a large array into two smaller sub-arrays: the low elements and the high elements. Quicksort can then recursively sort the sub-arrays.
+
+<h3>The steps are:</h3>
+
+1.Pick an element, called a pivot, from the array.</br>
+2.Reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the partition operation.</br>
+3.Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.</br>
+The base case of the recursion is arrays of size zero or one, which never need to be sorted. In pseudocode, a quicksort that sorts elements lo through hi (inclusive) of an array A can be expressed compactly as</br></br></br>
+quicksort(A, lo, hi):</br>
+  if lo < hi:</br>
+    p := partition(A, lo, hi)</br>
+    quicksort(A, lo, p - 1)</br>
+    quicksort(A, p + 1, hi)</br></br></br>
+Sorting the entire array is accomplished by calling quicksort(A, 1, length(A)). The partition operation is step 2 from the algorithm description above; it can be defined as:</br></br></br>
+
+  // lo is the index of the leftmost element of the subarray</br>
+  // hi is the index of the rightmost element of the subarray (inclusive)</br>
+  partition(A, lo, hi)</br>
+     pivotIndex := choosePivot(A, lo, hi)</br>
+     pivotValue := A[pivotIndex]</br>
+     // put the chosen pivot at A[hi]</br>
+     swap A[pivotIndex] and A[hi]</br>
+     storeIndex := lo</br>
+     // Compare remaining array elements against pivotValue = A[hi]</br>
+     for i from lo to hi-1, inclusive</br>
+         if A[i] <= pivotValue</br>
+             swap A[i] and A[storeIndex]</br>
+             storeIndex := storeIndex + 1</br>
+     swap A[storeIndex] and A[hi]  // Move pivot to its final place</br>
+     return storeIndex</br>
+
+<body></body>
+<Html>

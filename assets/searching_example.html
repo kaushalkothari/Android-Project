@@ -1,0 +1,45 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>Search</h1> </center>
+<h1>Algorithm</h1>
+<h2>Binary search</h2>
+int binary_search(int A[], int key, int imin, int imax)</br>
+{</br>
+  // test if array is empty</br>
+  if (imax < imin)</br>
+    // set is empty, so return value showing not found</br>
+    return KEY_NOT_FOUND;</br>
+  else</br>
+    {</br>
+      // calculate midpoint to cut set in half</br>
+      int imid = midpoint(imin, imax);</br>
+ </br>
+      // three-way comparison</br>
+      if (A[imid] > key)</br>
+        // key is in lower subset</br>
+        return binary_search(A, key, imin, imid - 1);</br>
+      else if (A[imid] < key)</br>
+        // key is in upper subset</br>
+        return binary_search(A, key, imid + 1, imax);</br>
+      else</br>
+        // key has been found</br>
+        return imid;</br>
+    }</br>
+}</br>
+<h2>Linear search</h2>
+LinearSearch(value, list)</br>
+   if the list is empty, return ?;</br>
+   else</br>
+     if the first item of the list has the desired value, return its location;</br>
+     else return LinearSearch(value, remainder of the list)</br>
+<body></body>
+<Html>

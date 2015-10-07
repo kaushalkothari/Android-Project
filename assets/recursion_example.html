@@ -1,0 +1,37 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<h2>Recursion Example Programme</h2> 
+<body>
+<h3>1.Tower Of Hanoi </h3>
+<img src="recursion_example.gif"></br>
+<h3>2.Factorial</h3>
+#include <stdio.h></br>
+
+int factorial(unsigned int i)</br>
+{</br>
+   if(i <= 1)</br>
+   {</br>
+      return 1;</br>
+   }</br>
+   return i * factorial(i - 1);</br>
+}</br>
+int  main()</br>
+{</br>
+    int i = 15;</br>
+    printf("Factorial of %d is %d\n", i, factorial(i));</br>
+    return 0;</br>
+}</br>
+When the above code is compiled and executed, it produces the following result:</br>
+
+Factorial of 15 is 2004310016</br>
+</body>
+<Html>

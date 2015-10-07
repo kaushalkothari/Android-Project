@@ -1,0 +1,69 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>Examples</h1> </center>
+<h2>Auto Storage Class</h2>
+<body>
+
+void main()</br>
+{</br>
+ auto mum = 10 ;</br>
+ {</br>
+      auto num = 60 ;</br>
+             printf("nNum : %d",num);</br>
+ }</br>
+ printf("nNum : %d",num);</br>
+}</br>
+Output :</br>
+Num : 60</br>
+Num : 20</br>
+
+<h2>Extern Storage Class</h2></br>
+
+int num =  75 ;  </br>
+
+void display();</br>
+
+void main()</br>
+{</br>
+ extern int num ;</br>
+             printf("nNum : %d",num);</br>
+ display();</br>
+}</br>
+
+void display()</br>
+{</br>
+ extern int num ;</br>
+             printf("nNum : %d",num);</br>
+}</br>
+Output :</br>
+Num : 75</br>
+Num : 75</br>
+<h2>Static Storage Class</h2>
+
+#include <stdio.h></br>
+void Check();</br>
+int main(){</br>
+   Check();</br>
+   Check();</br>
+   Check();</br>
+}</br>
+void Check(){</br>
+    static int c=0;</br>
+    printf("%d\t",c);</br>
+    c+=5;</br>
+}</br>
+Output</br>
+
+0      5     10</br>
+<h2>Register Storage Class</h2>
+register int a;</br>
+</body>
+<Html>

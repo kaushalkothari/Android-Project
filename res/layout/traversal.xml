@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:scrollbars="horizontal"
+     android:background="#000000"
+     
+     >
+
+    <TabHost
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+
+
+
+                   <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            
+            >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                 android:background="#a3a3a3"
+                 />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/lL1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="#000000"
+                    android:orientation="vertical"
+                    android:scrollbarStyle="insideOverlay"
+                    android:textAlignment="center" >
+                    <WebView android:layout_width="wrap_content"
+							    android:layout_height="wrap_content"
+							    android:id="@+id/theorywebview"/>
+
+                    <ScrollView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lL2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+				 
+				 <WebView android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:id="@+id/examplewebview"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lL3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    
+                    android:orientation="vertical" >
+                <WebView android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:id="@+id/algorithmwebview"/>
+                </LinearLayout>
+             
+                
+            </FrameLayout>
+        </LinearLayout>
+    
+    </TabHost>
+    
+</ScrollView>

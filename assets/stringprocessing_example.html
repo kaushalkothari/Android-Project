@@ -1,0 +1,51 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red};
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<h2>String Processing Example </h2> 
+<body>
+<table border="1">
+	<tr>
+		<th>Function</th>
+		<th>Work of Function</th>
+	</tr>
+	<tr>
+		<td>strlen()</td>
+		<td>Calculates the length of string</td>
+	</tr>
+		
+	<tr>
+		<td>strlcpy()</td>
+		<td>Copies a string to another string</td>
+	</tr>
+	<tr>
+		<td>strlcat()</td>
+		<td>Concatenates(joins) two strings</td>
+	</tr>
+	<tr>
+		<td>strlcmp()</td>
+		<td>Compares two string</td>
+	</tr>
+	
+	</table>
+<h3>Example</h3>
+	#include<stdio.h></br>
+
+int main(){</br>
+    char name[30];</br>
+    printf("Enter name: ");</br>
+    gets(name);     //Function to read string from user.</br>
+    printf("Name: ");</br>
+    puts(name);    //Function to display string.</br>
+    return 0;</br>
+}</br>
+Though, gets() and puts() function handle string, both these functions are defined in "stdio.h" header file.</br>
+</body>
+<Html>

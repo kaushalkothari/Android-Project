@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AlgoMall</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ds">Data Structure</string>
+    <string name="acc">ACC</string>
+    <string name="daa">DAA</string>
+    <string name="sc">Storage  Classes</string>
+    <string name="rc">Recursion</string>
+    <string name="sp">String Processing</string>
+    <string name="p">Pointers</string>
+    <string name="file">Files</string>
+    <string name="aa">Algo Analysis</string>
+    <string name="search">Searching</string>
+    <string name="sort">Sorting</string>
+    <string name="hash">Hashing</string>
+    <string name="stack">Stack</string>
+    <string name="queue">Queues</string>
+    <string name="list">Lists</string>
+    <string name="tree">Trees</string>
+    <string name="graph">Graphs</string>
+    <string name="intro">Introduction</string>
+    <string name="dc">Divide and Conquer</string>
+    <string name="greedy">Greedy Method</string>
+    <string name="dynamic">Dynamic Programming</string>
+    <string name="ts">Traversal and Searching</string>
+    <string name="back">Backtracking</string>
+    <string name="push">Push</string>
+    <string name="pop">Pop</string>
+    <string name="insert">Insert</string>
+    <string name="ec">Enter Contents</string>
+    <string name="title_activity_stackctivity">Stackctivity</string>
+    <string name="title_activity_stack">StackActivity</string>
+    <string name="title_activity_dsstack">Stack</string>
+    <string name="title_activity_dsqueue">Queue</string>
+    <string name="title_activity_dslinearsearch">Linear Search</string>
+    <string name="title_activity_dsbinarysearch">Binary Search</string>
+    <string name="title_activity_dssearch">Search</string>
+    <string name="title_activity_dslinklist">Linked List</string>
+    <string name="title_activity_dssinglly">Singlly Linked List</string>
+    <string name="title_activity_dsdoublly">Doublly Linked List</string>
+    <string name="title_activity_dssort">Sort</string>
+    <string name="title_activity_dsbubble">Bubble Sort</string>
+    <string name="title_activity_dsselection">Selection Sort</string>
+    <string name="title_activity_dsinsesrtion">Insertion Sort</string>
+    <string name="title_activity_dsquicksort">Quick Sort</string>
+    <string name="title_activity_dsmergesort">Merge Sort</string>
+    <string name="title_activity_tree">Tree</string>
+    <string name="title_activity_about">About</string>
+
+</resources>

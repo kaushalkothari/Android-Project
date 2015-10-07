@@ -1,0 +1,31 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+h4{color:green}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>Searching Technique</h1> </center>
+<h2>Breadth-first search </h2>
+
+<p>Breadth-first search (BFS) is an algorithm for traversing or searching tree or graph data structures. It starts at the tree root(or some arbitrary node of a graph, sometimes referred to as a `search key’) and explores the neighbour nodes first, before moving to the next level neighbours. Compare BFS with the equivalent, but more memory-efficient Iterative deepening depth-first search and contrast with depth-first search.
+The non-recursive implementation is similar to depth-first search but differs from it in two ways: it uses a queue instead of a stack, and it checks whether a vertex has been discovered before pushing the vertex rather than delaying this check until the vertex is popped from the stack.
+</p>
+<p>The non-recursive implementation is similar to depth-first search but differs from it in two ways: it uses a queue instead of a stack, and it checks whether a vertex has been discovered before pushing the vertex rather than delaying this check until the vertex is popped from the stack.</p>
+<h3>Analysis</h3>
+<h4>Time and space complexity:</h4>
+<p>The time complexity can be expressed as   since every vertex and every edge will be explored in the worst case. </p>
+<h4>Completeness and optimality</h4>
+
+<p>In the analysis of algorithms, the input to breadth-first search is assumed to be a finite graph, represented explicitly as an adjacency list or similar representation. However, in the application of graph traversal methods in artificial intelligence the input may be an implicit representation of an infinite graph.</p>
+<h2>Depth-first search</h2>
+<p>Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. One starts at the root(selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.</p>
+<h3>Properties</h3>
+<p>The time and space analysis of DFS differs according to its application area. In theoretical computer science, DFS is typically used to traverse an entire graph, and takes time T(|V| + |E|),[4] linear in the size of the graph. In these applications it also uses space O(|V|) in the worst case to store the stack of vertices on the current search path as well as the set of already-visited vertices. Thus, in this setting, the time and space bounds are the same as for breadth-first search and the choice of which of these two algorithms to use depends less on their complexity and more on the different properties of the vertex orderings the two algorithms produce</p>
+<body></body>
+<Html>

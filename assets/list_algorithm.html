@@ -1,0 +1,79 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1></h1> </center>
+<h2></h2>
+<h3>Algorith For Insertion</h3> 
+void insert(node *ptr, int data)</br>
+{</br>
+        /* Iterate through the list till we encounter the last node.*/</br>
+        while(ptr->next!=NULL)</br>
+        {</br>
+                ptr = ptr -> next;</br>
+        }</br>
+        /* Allocate memory for the new node and put data in it.*/</br>
+        ptr->next = (node *)malloc(sizeof(node));</br>
+        ptr = ptr->next;</br>
+        ptr->data = data;</br>
+        ptr->next = NULL;</br>
+}</br>
+
+<h3>Algorith For Display</h3> 
+void display()</br>
+{</br>
+	struct node *ptr;</br>
+	printf("Item int list are");</br>
+	for(ptr=first;ptr!=0;ptr=ptr->next)</br>
+	{</br>
+		printf("\n%d",ptr->no);</br>
+	}</br>
+}</br>
+
+<h3>Algorith For Delete Begining</h3> 
+void deleteatbeg(node **start)</br>
+{ </br>
+	node *ptr;</br>
+	int temp;</br>
+	ptr = *start ;</br>
+	temp = ptr->info;</br>
+	*start = ptr->next ;</br>
+	free(ptr);</br>
+	printf("\nDeleted item is %d : \n",temp);</br>
+}</br>
+
+<h3>Algorith For Delete Last</h3> 
+void deleteatlast(node **start)</br>
+{ </br>
+	node *ptr,*cptr;</br>
+	int temp;</br>
+	if((*start)->next == NULL)</br>
+	{ </br>
+		ptr = *start ;</br>
+		*start = NULL;</br>
+		temp = ptr->info;</br>
+	}</br>
+	else</br>
+	{ </br>
+		cptr = *start ;</br>
+		ptr =(*start)->next;</br>
+		while(ptr->next != NULL)</br>
+		{ </br>
+			cptr = ptr;</br>
+			ptr = ptr->next;</br>
+		}</br>
+		cptr->next = NULL;</br>
+		temp = ptr->info;</br>
+	}</br>
+	free(ptr);</br>
+	printf("\nDeleted item is %d : \n",temp);</br>
+}</br>
+<body></body>
+<Html>

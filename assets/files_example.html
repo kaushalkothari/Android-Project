@@ -1,0 +1,60 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<h2>File Example </h2> 
+<h3>File Opening</h3>
+<body>
+ptr=fopen("fileopen","mode")</br>
+
+For Example:</br>
+fopen("E:\\cprogram\program.txt","w"); </br>
+  
+/* --------------------------------------------------------- */</br>
+ E:\\cprogram\program.txt is the location to create file. </br>  
+ "w" represents the mode for writing.</br>
+/* --------------------------------------------------------- */</br>
+<h3>File Closing</h3></br>
+
+fclose(ptr); //ptr is the file pointer associated with file to be closed.</br>
+<h3>Writing to a File</h3></br>
+<pre>#include <stdio.h></br>
+int main()</br>
+{</br>
+   int n;</br>
+   FILE *fptr;</br>
+   fptr=fopen("C:\\program.txt","w");</br>
+   if(fptr==NULL){</br>
+      printf("Error!");   </br>
+      exit(1);             </br>
+   }</br>
+   printf("Enter n: ");</br>
+   scanf("%d",&n);</br>
+   fprintf(fptr,"%d",n);   </br>
+   fclose(fptr);</br>
+   return 0;</br>
+}</br>
+<h3>Reading File From</h3>
+#include <stdio.h></br>
+int main()</br>
+{</br>
+   int n;</br>
+   FILE *fptr;</br>
+   if ((fptr=fopen("C:\\program.txt","r"))==NULL){</br>
+       printf("Error! opening file");</br>
+       exit(1);         /* Program exits if file pointer returns NULL. */</br>
+   }</br>
+   fscanf(fptr,"%d",&n);</br>
+   printf("Value of n=%d",n); </br>
+   fclose(fptr);   </br>
+   return 0;</br>
+}</br>
+</body>
+<Html>

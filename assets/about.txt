@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+h2 {color:white}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<h2>1.Advance C Concepts:</h2></br>
+-Storage Classes</br>
+-Recursion</br>
+-String processing</br>
+-Pointer</br>
+-Files</br>
+-Algorithm Analysis</br> 
+-Searching </br>
+-Sorting</br>
+-Hashing</br>
+<h2>2.Data Structure</h2>
+-Stack</br>
+-Queue</br>
+-Lists</br>
+-Tree</br>
+-Graph</br>
+<h2>3.Design and Analysis of Algorithm:</h2></br>
+-Introduction</br>
+-Divide And Conquer</br>
+-Dynamic Programming</br>
+-Backtracking</br>
+-Basic Traversal</br>
+-Search Techniques</br>
+<h2>References</h2></br>
+1.http://en.wikipedia.org/wiki/Data_structure</br>
+2.http://en.wikipedia.org/wiki/Algorithm_design</br>
+3.http://en.wikipedia.org/wiki/C_(programming_language)</br>
+4.http://en.wikibooks.org/wiki/Data_Structures</br>
+5.https://www.topcoder.com/community/data-science/data-science-tutorials/introduction-to-graphs-and-their-data-structures-section-1/</br>
+6.http://nptel.ac.in/courses/106102064/1</br>
+7.http://discuss.codechef.com/questions/48877/data-structures-and-algorithms</br>
+</body>
+</html>

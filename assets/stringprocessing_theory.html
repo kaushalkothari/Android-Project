@@ -1,0 +1,57 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>String Processing</h1> </center>
+<h2></h2>
+
+<p>These functions are defined in string.h header file. Hence you need to include this header file whenever you use these string handling functions in your program.
+All these functions take either character pointer or character arrays as arguments.</p>
+<h2>1.strlen()</h2></br>
+      <p>strlen() function returns the length of the string. strlen() function returns integer value.</br></br></p>
+
+<h2>2.strcpy()</h2></br>
+    <p> strcpy() function is used to copy one string to another. The Destination_String should be a variable and Source_String can either be a string constant or a variable.</p></br></br>
+
+
+ <h3> Syntax:</h3></br>
+   <p>strcpy(Destination_String,Source_String);</p></br></br>
+
+<h2>3.strncpy()</h2></br></br>
+        <p>strncpy() is used to copy only the left most n characters from source to destination. </p></br>
+
+    <h3> Syntax:</h3></br>
+         <p> strncpy(Destination_String, Source_String,no_of_characters);</p></br></br>
+
+
+<h2>4.strcat()</h2></br>
+   <p> strcat() is used to concatenate two strings.</p></br>
+   
+  
+       <h3> Syntax:</h3></br>
+        <p>  strcat(Destination_String, Source_String);</p></br></br>
+
+<h2>5.strncat()</h2></br>
+      <p> strncat() is used to concatenate only the leftmost n characters from source with the destination string.</p></br>
+          
+
+     <h3> Syntax:</h3></br>
+        <p> strncat(Destination_String, Source_String,no_of_characters);</p></br></br>
+
+<h2>6.strcmp()</h2></br>
+      <p> strcmp() function is use two compare two strings. strcmp() function does a case sensitive comparison between two strings. </p></br>
+     
+       <h3> Syntax:</h3></br>
+           int strcmp(string1, string2);</br>
+               This functi on returns integer value after comparison.Value returned is 0 if two strings are equal.</br>
+               If the first string is alphabetically greater than the second string then, it returns a positive value.</br>
+               If the first string is alphabetically less than the second string then, it returns a negative value</br>
+</body>
+<Html>

@@ -1,0 +1,59 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>File</h1> </center>
+
+A file represents a sequence of bytes, does not matter if it is a text file or binary file. 
+C programming language provides access on high level functions as well as low level (OS level)
+calls to handle file on your storage devices. This chapter will take you through 
+important calls for the file management.
+
+<p>Function of File Handing</p>
+<h2>1.Opening Files</h2>
+You can use the fopen( ) function to create a new file or to open an existing file, 
+   this call will initialize an object of the type FILE, 
+   which contains all the information necessary to control the stream. 
+<p>Syntax:</p>
+FILE *fopen( const char * filename, const char * mode );
+<h2>2.Closing a File</h2>
+  To close a file, use the fclose( ) function. The prototype of this function is:
+<p>Syntax:</p>
+int fclose( FILE *fp );
+<h2>3.Writing a File</h2>
+ Following is the simplest function to write individual characters to a stream:
+<p>Syntax:</p>
+int fputc( int c, FILE *fp );
+<p> The function fputc() writes the character value of the argument c to the output stream 
+         referenced by fp. It returns the written character written on success otherwise EOF 
+         if there is an error. You can use the following functions to write a null-terminated </p>
+<p>Syntax:</p>
+int fputs( const char *s, FILE *fp );
+ <p>The function fputs() writes the string s to the output stream referenced by fp. 
+    It returns a non-negative value on success, otherwise EOF is returned in case of any
+    error. You can use int fprintf(FILE *fp,const char *format, ...) function as well 
+    to write a string into a file.</p>
+<h2>4.Reading a File</h2>
+   Following is the simplest function to read a single character from a file:
+<p>Syntax:</p>
+ int fgetc( FILE * fp );
+ <p> The fgetc() function reads a character from the input file referenced by fp. 
+    The return value is the character read, or in case of any error it returns EOF. 
+    The following functions allow you to read a string from a stream:</p>
+<p>Syntax:</p>
+ char *fgets( char *buf, int n, FILE *fp );
+ <p> The functions fgets() reads up to n - 1 characters from the input stream referenced by fp. 
+  It copies the read string into the buffer buf, appending a null character to terminate the string.</p>
+<h2>5.Fseek Function</h2>
+<p>In the C Programming Language, the fseek function changes the file position indicator for 
+the stream pointed to by stream.</p>
+<p>Syntax:</p>
+int fseek(FILE *stream, long int offset, int whence);
+<body></body>
+<Html>

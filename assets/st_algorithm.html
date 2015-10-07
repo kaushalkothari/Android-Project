@@ -1,0 +1,51 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+h3{color:red}
+h4{color:green}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1></h1> </center>
+<h2>Breadth-first search </h2>
+<h3>Pseudocode</h3>
+Input: A graph G and a vertex v of G</br>
+Output: All vertices reachable from v labeled as discovered</br>
+A non-recursive implementation of BFS:</br>
+1 procedure BFS(G,v) is</br>
+2      let Q be a queue</br>
+3      Q.enqueue(v)</br>
+4      label v as discovered</br>
+5      while Q is not empty</br>
+6         v ? Q.dequeue()</br>
+7         for all edges from v to w in G.adjacentEdges(v) do</br>
+8             if w is not labeled as discovered</br>
+9                 Q.enqueue(w)</br>
+10                label w as discovered</br>
+
+<h2>Depth-first search</h2>
+<h3>Pseudocode</h3>
+Input: A graph G and a vertex v of G</br>
+Output: All vertices reachable from v labeled as discovered</br>
+<h4>A recursive implementation of DFS</h4>
+1  procedure DFS(G,v):</br>
+2      label v as discovered</br>
+3      for all edges from v to w in G.adjacentEdges(v) do</br>
+4          if vertex w is not labeled as discovered then</br>
+5              recursively call DFS(G,w)</br>
+<h4>A non-recursive implementation of DFS</h4>1  procedure DFS-iterative(G,v):</br>
+2      let S be a stack</br>
+3      S.push(v)</br>
+4      while S is not empty</br>
+5            v = S.pop() </br>
+6            if v is not labeled as discovered:</br>
+7                label v as discovered</br>
+8                for all edges from v to w in G.adjacentEdges(v) do</br>
+9                    S.push(w)</br>
+
+<body></body>
+<Html>

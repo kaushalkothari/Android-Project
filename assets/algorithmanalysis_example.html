@@ -1,0 +1,28 @@
+<Html>
+<head>
+<style>
+h2 {color:yellow}
+p{
+text-align:justify
+}
+</style>
+</head>
+<body bgcolor="#000000" text="#FFFFFF">
+<center><h1>Algorithm Analasis</h1> </center>
+<h2>Example</h2>
+<p><br>for (int i = 0; i < a.length; i++) {</br>
+<br>    System.out.println(a[i]);</br>
+<br>}</br></p>
+<p>Here n=a.length (provided we know that all of the items in the array have a fixed size, which is often the case). We have</p>
+
+<br>1.1 initialization of i</br>
+<br>2.n comparisons of i against a.length</br>
+<br>3.n increments of i</br>
+<br>4.n array indexing operations (to compute a[i])</br>
+<br>5.n invocations of System.out.println</br>
+<br>so we write T(n)=4n+1.</br>
+
+<p>Or should we?</p>
+
+<p>All operations are not created equal. The printing completely overwhelms the increments, compares and indexing operations. We might as well talk about having n compare-index-print-increment operations. Then T(n)=n+1. While we’re at it, we might as well realize that initialization doesn’t mean much, so we’re safe to write T(n)=n.</p>
+<body></body><Html>
